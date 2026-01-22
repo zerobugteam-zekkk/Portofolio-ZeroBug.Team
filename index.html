@@ -4,25 +4,26 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ZeroBug Team — Web, Mobile & IoT Solutions</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="hero">
   <nav class="nav">
-    <div class="logo">ZeroBug<span>.</span></div>
+    <div class="logo">ZeroBug<span>;</span></div>
     <a href="#contact" class="btn-outline">Contact</a>
   </nav>
 
   <div class="hero-content">
     <span class="badge">Software Development Team</span>
-    <h1>We Build Web, Mobile,<br>and IoT Solutions</h1>
-    <p>
+    <h1 data-aos="fade-up">We Build Web, Mobile,<br>and IoT Solutions</h1>
+    <p data-aos="fade-up" data-aos-delay="100">
       From internal systems to real-time IoT dashboards,
       we help turn ideas into reliable and scalable software.
     </p>
 
-    <div class="hero-btn">
+    <div class="hero-btn"data-aos="fade-up" data-aos-delay="200">
       <a href="#contact" class="btn-primary">Discuss Your Project</a>
       <a href="#projects" class="btn-secondary">View Work</a>
     </div>
@@ -110,26 +111,52 @@
   </div>
 </section>
 
-<section id="contact" class="cta">
-  <h2>Have a Project in Mind?</h2>
-  <p>
+<section id="contact" class="cta" data-aos="fade-up">
+  <h2 data-aos="fade-up">Have a Project in Mind?</h2>
+  <p data-aos="fade-up" data-aos-delay="100">
     Let’s discuss how we can help you build
     a reliable and maintainable solution.
   </p>
 
-  <a
-    href="https://wa.me/+6281229523471"
-    target="_blank"
-    class="btn-primary"
-  >
-    Contact via WhatsApp
-  </a>
+  <div class="cta-action" data-aos="zoom-in" data-aos-delay="200">
+    <a
+      href="https://wa.me/6281229523471"
+      target="_blank"
+      class="btn-primary"
+    >
+      Contact via WhatsApp
+    </a>
+  </div>
 </section>
 
 <footer class="footer">
   <p>© 2026 ZeroBug Team. All rights reserved.</p>
 </footer>
 
+<!-- JavaScript -->
 <script src="script.js"></script>
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.36/bundled/lenis.min.js"></script>
+<script>
+  const lenis = new Lenis({
+    duration: 1.1,
+    smooth: true,
+    direction: "vertical",
+  });
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+  requestAnimationFrame(raf);
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 900,
+    once: true,
+    easing: 'ease-out-cubic'
+  });
+</script>
 </body>
 </html>

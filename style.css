@@ -111,7 +111,29 @@ a {
 }
 
 .cta {
+  padding: 80px 8%;
+  text-align: center;
   background: linear-gradient(135deg, #6d28d9, #4c1d95);
+}
+
+.cta p {
+  max-width: 520px;
+  margin: 0 auto;
+  color: #e5e7eb;
+}
+
+.cta-action {
+  margin-top: 32px;
+}
+
+.btn-primary {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 14px 36px;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: all 0.25s ease;
 }
 
 .footer {
@@ -119,4 +141,20 @@ a {
   text-align: center;
   background: #020617;
   font-size: 0.85rem;
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(139,92,246,0.3);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(139,92,246,0.6);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(139,92,246,0.3);
+  }
+}
+
+.cta-pulse {
+  animation: pulseGlow 2.5s infinite;
 }
